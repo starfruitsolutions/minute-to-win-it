@@ -1,0 +1,225 @@
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.fullscreen-fg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 50;
+  background: black;
+}
+
+.fullscreen-fg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-buttons{
+  display:flex;
+  justify-content: center;
+  z-index: 100;
+}
+.blueprint-buttons {  
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding-bottom: 50px;
+}
+.timer-buttons {  
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding-bottom: 50px;
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-fg__video {
+    width: auto;
+    height: 100%;
+  }
+}
+.page{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background-color: rgba(0,0,0,.25);
+}
+.top{
+  opacity:0.9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    
+}
+.middle{
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Staatliches', cursive;
+  font-size: 60px;
+  color:white;
+  height: 33vh;
+  padding: 150px;
+}
+.team{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color:rgba(50,175,255, 0.95);
+  border-radius:5%; 
+  padding: 30px;
+  box-shadow: 5px 7px rgba(0, 0, 0, .5);
+}
+.teamscore{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.score{
+  width: 50px;
+  text-align: center;
+}
+.bottom{
+  opacity:0.9;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  text-shadow: 4px 2px rgba(0,0,0,0.5);
+    
+}
+
+button {
+  font-family: 'Staatliches', cursive;
+  outline: 0;
+  background-color:rgb(50,175,255);
+  border: 0;
+  border-radius:10%;
+  padding: 15px;
+  color: white;
+  font-size: 60px;
+  height: 140px;
+  text-shadow: 4px 2px rgba(0,0,0,0.5);
+  cursor: pointer;  
+  text-shadow: 4px 2px rgba(0,0,0,0.5);
+}
+button:hover,.form button:active,.form button:focus {
+  background-color:rgb(0,100,255);
+}
+
+.image{
+     width: 25%; 
+    text-align: center;
+}
+img{
+    max-height: 200px;
+}
+
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+   /* background-image: url("background.jpg");
+    background-size: cover;*/
+    /*
+  background: #76b852; /* fallback for old browsers 
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+    */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
